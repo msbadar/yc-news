@@ -1,7 +1,7 @@
 $primary: #fe6502;
 $primaryVariant: #bc7852;
 $black: #333;
-$grey: #9ea5ad;
+$grey: #828282;
 $blue: #28689b;
 
 * {
@@ -16,46 +16,157 @@ body {
     font-size: 100%;
     font-family: Arial, Helvetica, sans-serif;
 }
-.header {
-    background: $primary;
-    color: white;
-}
-
-button{
+button {
     background: none;
     cursor: pointer;
 }
 
-a{
+a {
     text-decoration: none;
     color: $black;
     cursor: pointer;
 }
 
-.data-row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    text-align: center;
-    padding: 5px;
-    & > * {
-        margin-right: 20px;
+.header {
+    background: $primary;
+    color: white;
+    h1 {
+        font-weight: bold;
+        font-size: 1.5em;
+        padding: 10px;
     }
-    & > :nth-child(1) {
-        width: 80px;
+    .row {
+        display: none;
     }
-    & > :nth-child(2) {
-        width: 80px;
-    }
-    & > :nth-child(3) {
-        width: 40px;
-    }
-    & > :nth-child(4) {
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-    }
+}
+
+.row {
+    padding: 10px;
     &:nth-child(even) {
         background-color: #ddd;
     }
+    .comments {
+        margin-left: 55px;
+        color: $grey;
+        font-size: 0.8em;
+        padding: 0 5px 5px;
+    }
+    .row-data {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .points {
+        width: 50px;
+        margin-right: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: $grey;
+        margin-top: -30px;
+        color: $grey;
+        font-size: 0.9em;
+        button {
+            color: $grey;
+            padding: 5px;
+        }
+    }
+
+    .actions {
+        font-size: 0.9em;
+        a {
+            color: #828282;
+            margin-right: 10px;
+        }
+    }
+
+    .title {
+        font-size: 16px;
+        color: black;
+    }
+}
+
+@media screen and (min-width: 720px) {
+    .header .row {
+        display: flex;
+        background-color: $primary;
+        word-break: break-all;
+        font-size: 0.9em;
+
+        & > * {
+            margin-right: 10px;
+        }
+        :nth-child(1) {
+            width: 80px;
+        }
+        :nth-child(2) {
+            width: 80px;
+        }
+        :nth-child(3) {
+            width: 80px;
+        }
+    }
+    .row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        padding: 5px;
+
+        .comments {
+            width: 80px;
+            padding: 0;
+            margin: 0 10px 0 0;
+            .label {
+                display: none;
+            }
+        }
+
+        .points {
+            flex-direction: row-reverse;
+            display: flex;
+            margin-top: 0;
+            width: auto;
+            .points-count {
+                width: 80px;
+            }
+            .label {
+                display: none;
+            }
+            button {
+                width: 80px;
+                margin-left: 10px;
+            }
+        }
+
+        .row-details {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+        }
+
+        .actions {
+            margin-left: 20px;
+        }
+    }
+}
+
+.pagination {
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    a {
+        color: $primary;
+        font-weight: bold;
+    }
+}
+
+.chart {
+    border: 4px solid $primary;
+    border-right: 0;
+    border-left: 0;
+    padding: 20px;
+    margin-bottom: 40px;;
 }

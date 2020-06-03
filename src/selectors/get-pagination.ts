@@ -1,0 +1,1 @@
+export default (s: any) => ({ page: s.news.page, nbPages: s.news.nbPages })
