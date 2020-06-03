@@ -1,25 +1,6 @@
 import React from 'react';
 import { LineChart, Line, YAxis, ResponsiveContainer, Tooltip } from 'recharts';
 
-// @ts-ignore
-import DefaultTooltipContent from 'recharts/lib/component/DefaultTooltipContent';
-
-const CustomTooltip = (props: any) => {
-    if (props.payload[0] != null) {
-        const newPayload = [
-            {
-                name: 'Name',
-                value: props.payload[0].payload.points,
-            },
-            ...props.payload,
-        ];
-
-        return <DefaultTooltipContent {...props} payload={newPayload} />;
-    }
-
-    return <DefaultTooltipContent {...props} />;
-};
-
 export default ({
     data
 }: {
