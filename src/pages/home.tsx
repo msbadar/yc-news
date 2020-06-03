@@ -6,7 +6,6 @@ import fetchFeed from "../actions/fetch-feed";
 import fetchUserActions from "../actions/fetch-user-actions";
 import Chart from "../components/chart";
 import { useSelector } from "react-redux";
-import _ from "lodash"
 import getResultsSelector from "../selectors/get-results"
 import getPaginationSelector from "../selectors/get-pagination"
 import Table from "../components/table";
@@ -23,7 +22,7 @@ export default () => {
         const page = (new URLSearchParams(window.location.search)).get('page')
         dispatch(fetchFeed(page))
         dispatch(fetchUserActions())
-    }, [])
+    }, [dispatch])
 
 
     const handleVote = (id: number) => dispatch(vote(id))

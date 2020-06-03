@@ -14,7 +14,7 @@ export default ({
 
     return (
         <div>
-            {data.map((news: any) => <Row news={news} handleVote={handleVote} handleHide={handleHide} />)}
+            {data.map((news: any) => <Row key={news.objectID} news={news} handleVote={handleVote} handleHide={handleHide} />)}
         </div>
     )
 }
