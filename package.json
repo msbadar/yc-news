@@ -32,7 +32,9 @@
     "wepack": "webpack",
     "client-build": "react-scripts build",
     "server-build": "webpack --config server/webpack.prod.js ",
-    "server": "yarn run client-build && yarn run server-build && node server/dist"
+    "deploy": "yarn run client-build && yarn run server-build",
+    "run-server": "yarn run deploy && node server/dist"
+    
   },
   "eslintConfig": {
     "extends": "react-app"

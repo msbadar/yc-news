@@ -1,0 +1,10 @@
+steps:
+  - name: nodejs12
+    entrypoint: yarn
+    args: ["--cwd", "run", "deploy"]
+
+  - name: "gcr.io/cloud-builders/gcloud"
+    args: ["app", "deploy", "appengine.yaml"]
+
+timeout: "1800s"
+images: ["gcr.io/$PROJECT_ID/server-build:$BUILD_ID"]
