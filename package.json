@@ -24,15 +24,14 @@
     "webpack-node-externals": "^1.7.2"
   },
   "scripts": {
-    "dev": "react-scripts start",
-    "prepare": "yarn run gcp-build",
     "start": "node server/dist/index.js",
+    "dev": "react-scripts start",
     "test": "react-scripts test",
-    "wepack": "webpack",
     "client-build": "react-scripts build",
     "server-build": "webpack --config server/webpack.prod.js ",
+    "prepare": "yarn run gcp-build",
     "gcp-build":  "yarn run client-build && yarn run server-build",
-    "run-server": "yarn run deploy && node server/dist"    
+    "run-server": "yarn run prepare && node server/dist"    
   },
   "eslintConfig": {
     "extends": "react-app"
