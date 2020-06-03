@@ -1,0 +1,61 @@
+$primary: #fe6502;
+$primaryVariant: #bc7852;
+$black: #333;
+$grey: #9ea5ad;
+$blue: #28689b;
+
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header {
+    background: $primary;
+    color: white;
+}
+
+button{
+    background: none;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    color: $black;
+    cursor: pointer;
+}
+
+.data-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+    & > * {
+        margin-right: 20px;
+    }
+    & > :nth-child(1) {
+        width: 80px;
+    }
+    & > :nth-child(2) {
+        width: 80px;
+    }
+    & > :nth-child(3) {
+        width: 40px;
+    }
+    & > :nth-child(4) {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+    &:nth-child(even) {
+        background-color: #ddd;
+    }
+}
