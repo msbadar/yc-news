@@ -1,5 +1,5 @@
 steps:
-  - name: nodejs12
+  - name: node:12
     entrypoint: yarn
     args: ["--cwd", "run", "deploy"]
 
