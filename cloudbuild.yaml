@@ -1,8 +1,4 @@
 steps:
-  - name: node:12
-    entrypoint: yarn
-    args: ["run", "deploy"]
-
   - name: "gcr.io/cloud-builders/gcloud"
     args: ["app", "deploy", "appengine.yaml"]
 
