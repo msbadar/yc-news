@@ -2,11 +2,8 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
+  "main": "server/dist/index.js",
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "@types/lodash": "^4.14.154",
     "add": "^2.0.6",
     "express": "^4.17.1",
     "isomorphic-fetch": "^2.2.1",
@@ -32,9 +29,8 @@
     "wepack": "webpack",
     "client-build": "react-scripts build",
     "server-build": "webpack --config server/webpack.prod.js ",
-    "deploy": "yarn run client-build && yarn run server-build",
-    "run-server": "yarn run deploy && node server/dist"
-    
+    "deploy":  "yarn && yarn run client-build && yarn run server-build",
+    "run-server": "yarn run deploy && node server/dist"    
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -61,6 +57,10 @@
     "@types/redux": "^3.6.0",
     "@typescript-eslint/parser": "^3.1.0",
     "ts-node-dev": "^1.0.0-pre.44",
-    "typescript": "^3.9.3"
+    "typescript": "^3.9.3",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/lodash": "^4.14.154"
   }
 }
