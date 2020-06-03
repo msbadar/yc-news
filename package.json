@@ -30,6 +30,8 @@
     "client-build": "react-scripts build",
     "server-build": "webpack --config server/webpack.prod.js ",
     "deploy":  "yarn && yarn run client-build && yarn run server-build",
+    "prepare": "yarn run deploy",
+    "pretest": "yarn run deploy",
     "run-server": "yarn run deploy && node server/dist"    
   },
   "eslintConfig": {
