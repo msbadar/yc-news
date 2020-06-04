@@ -3,8 +3,21 @@
 ## Demo
  [https://ycnews.appspot.com](https://ycnews.appspot.com/)
 
-## Stack
+## Tasks
 
+- [x] Front Page” feed with line chart.
+- [x] Next & Prev Buttons - url friendly
+- [x] Upvote
+- [x] Hide
+- [x] Chart to represent Votes over ID
+- [x] Test cases
+- [x] SSR Server side rendering & SEO Friendly
+- [x] PWA Optimization
+- [x] Responsive
+- [x] CI/CD - using google build
+- [x] Deployed to app engine
+
+## Stack
 - Typescript
 - React
 - Redux
@@ -31,3 +44,7 @@ To enable auto deploy to googel app engine whenever push to github, you need to 
 3. Create triggers from https://console.cloud.google.com/cloud-build/triggers 
 4. Modify IAM role from https://console.cloud.google.com/iam-admin/iam for `<projectid>@cloudbuild.gserviceaccount.com`. It should be `App Engine Admin, Cloud Build Service Account` 
 5. Enable app engine from `https://console.cloud.google.com/appengine`
+
+
+## Testing 
+Unit test cases is covered using jest and @testing-library/react. It can run using `yarn run test`
