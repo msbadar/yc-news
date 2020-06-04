@@ -1,4 +1,4 @@
-const initialState = {}
+export const initialState = {}
 export default (state = initialState, action: any) => {
     switch (action.type) {
         case "FETCH_USER_ACTIONS":

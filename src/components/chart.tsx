@@ -1,14 +1,19 @@
 import React from 'react';
 import { LineChart, Line, YAxis, ResponsiveContainer, Tooltip } from 'recharts';
 
+
 export default ({
-    data
+    data,
+    width = "99%",
+    height = 350,
 }: {
+    width?: number | string,
+    height?: number | string
     data: []
 }) => {
 
     return <div className="chart">
-        <ResponsiveContainer height="99%">
+        <ResponsiveContainer height={height} width={width}>
             <LineChart data={data} margin={{ top: 20, right: 30, left: 0, bottom: 0 }}>
                 <Line type="monotone" dataKey="totalPoint" />
                 <YAxis dataKey="points" />
